@@ -4,6 +4,7 @@ COPY . .
 
 COPY service_account_creds_manageschoolnotes.json /app
 #COPY C:/Users/samund/source/service_account_creds_manageschoolnotes.json /app
+RUN pip install --upgrade pip
 RUN pip install firebase-admin firebase-admin typing pydantic unidecode pytz
 
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]

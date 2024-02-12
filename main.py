@@ -254,7 +254,7 @@ def create_new_user(uid,
                     is_admin,
                     timestamp):
     new_user = create_user(uid = uid,
-                        email = email or f"yv-{timestamp}@{EMAIL_DOMAIN}.com",
+                        email = email or f"msn-{timestamp}@{EMAIL_DOMAIN}.com",
                         password = EMAIL_PASSWORD,
                         phone_number = phone_number,
                         display_name = display_name,
@@ -420,7 +420,7 @@ async def get_or_create_user(*,
         time_now = get_cameroon_time_now()
         timestamp = int(time_now.timestamp()*1000)
         custom_claims={'isAdmin': isAdmin, 'createTimestamp': timestamp}
-        email = email or f"yv-{timestamp}@{EMAIL_DOMAIN}.com"
+        email = email or f"msn-{timestamp}@{EMAIL_DOMAIN}.com"
         if(skipFirestoreCheck):
             new_user=  create_new_user(uid = phoneNumber,
                                     email = email,
