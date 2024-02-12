@@ -1,2 +1,4 @@
 # Credential Files
 service_account_creds_manageschoolnotes.json
+*.env
+!example.*
