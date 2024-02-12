@@ -1,0 +1,5 @@
+PORT = 8000
+BIND = '127.0.0.1'
+WORKERS = 5
+RELOAD = True
+DEBUG = True
